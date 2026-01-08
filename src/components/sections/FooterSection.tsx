@@ -64,7 +64,16 @@ const FooterSection = () => {
               className="group"
               data-gtm-click="cta_footer"
               data-gtm-label="Vem Ser Residente de Elite"
-              onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => {
+                (window as any).dataLayer = (window as any).dataLayer || [];
+                (window as any).dataLayer.push({
+                  event: 'botao_clique',
+                  category: 'footer_section',
+                  action: 'clique_cta',
+                  label: 'Vem Ser Residente de Elite'
+                });
+                document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               VEM SER RESIDENTE DE ELITE
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

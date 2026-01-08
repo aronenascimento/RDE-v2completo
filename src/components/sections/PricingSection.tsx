@@ -7,7 +7,17 @@ const PricingSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<{ title: string; link: string } | null>(null);
 
-  const handleOpenModal = (title: string, link: string) => {
+  const handleOpenModal = (title: string, link: string, highlight?: string | null) => {
+    // Dispara evento para o GTM
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({
+      event: 'botao_clique',
+      category: 'pricing_section',
+      action: 'clique_cta',
+      label: title,
+      plan: highlight || 'N/A'
+    });
+    
     setSelectedPlan({ title, link });
     setIsModalOpen(true);
   };
@@ -159,7 +169,7 @@ const PricingSection = () => {
                     data-gtm-click="cta_pricing"
                     data-gtm-label={plan.title}
                     data-gtm-plan={plan.highlight || plan.subtitle}
-                    onClick={() => handleOpenModal(plan.title, plan.link)}
+                    onClick={() => handleOpenModal(plan.title, plan.link, plan.highlight)}
                   >
                     Quero essa opção
                   </Button>

@@ -86,14 +86,23 @@ const FeaturesSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button 
-            variant="cta" 
-            size="lg"
-            className="text-sm"
-            onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            QUAL O MELHOR PROGRAMA PARA MIM
-          </Button>
+        <Button 
+          variant="cta" 
+          size="lg"
+          className="text-sm"
+          onClick={() => {
+            (window as any).dataLayer = (window as any).dataLayer || [];
+            (window as any).dataLayer.push({
+              event: 'botao_clique',
+              category: 'features_section',
+              action: 'clique_cta',
+              label: 'Qual o Melhor Programa Para Mim'
+            });
+            document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          QUAL O MELHOR PROGRAMA PARA MIM
+        </Button>
         </div>
       </div>
     </section>
