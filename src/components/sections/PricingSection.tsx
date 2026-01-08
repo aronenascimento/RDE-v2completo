@@ -17,7 +17,7 @@ const PricingSection = () => {
       highlight: "VITALÍCIO",
       title: "MENTORIA + INTENSIVÃO",
       subtitle: "Acesso até passar",
-      originalPrice: null, // Removido o preço original
+      originalPrice: "R$ 12.397",
       price: "Por 12x de R$ 944",
       features: [
         "Mentoria completa",
@@ -34,7 +34,7 @@ const PricingSection = () => {
       highlight: "1 ANO",
       title: "MENTORIA + INTENSIVÃO",
       subtitle: null,
-      originalPrice: null, // Removido o preço original
+      originalPrice: "R$ 4.947",
       price: "Por 12x de R$ 343",
       features: [
         "Mentoria completa",
@@ -50,7 +50,7 @@ const PricingSection = () => {
       highlight: null,
       title: "MENTORIA",
       subtitle: "1 ANO",
-      originalPrice: null, // Removido o preço original
+      originalPrice: "R$ 3.847",
       price: "Por 12x de R$ 304",
       features: [
         "Mentoria completa",
@@ -65,7 +65,7 @@ const PricingSection = () => {
       highlight: "RECOMENDADO",
       title: "MENTORIA",
       subtitle: "2 ANOS - Opção para quem quer se preparar desde o 5° ano",
-      originalPrice: null, // Removido o preço original
+      originalPrice: "R$ 7.694",
       price: "Por 12x de R$ 599",
       features: [
         "Planejamento longo prazo",
@@ -130,7 +130,7 @@ const PricingSection = () => {
                   {/* Pricing */}
                   <div className="mb-6">
                     {plan.originalPrice && (
-                      <p className="text-sm text-muted-foreground line-through">
+                      <p className="text-sm text-muted-foreground line-through decoration-red-500 decoration-2">
                         De {plan.originalPrice}
                       </p>
                     )}
