@@ -1,7 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+}
+
 interface ActiveCampaignFormProps {
-  onSuccess: (link: string) => void;
+  onSuccess: (link: string, formData: FormData) => void;
   targetLink: string;
 }
 
@@ -595,7 +601,19 @@ const ActiveCampaignForm: React.FC<ActiveCampaignFormProps> = ({ onSuccess, targ
     const handleSuccess = () => {
       if (!successHandledRef.current) {
         successHandledRef.current = true;
-        onSuccess(targetLink);
+        
+        // Captura os dados do formulário
+        const nameInput = formElement.querySelector('#fullname') as HTMLInputElement | null;
+        const emailInput = formElement.querySelector('#email') as HTMLInputElement | null;
+        const phoneInput = formElement.querySelector('#phone') as HTMLInputElement | null;
+        
+        const formData: FormData = {
+          name: nameInput?.value || '',
+          email: emailInput?.value || '',
+          phone: phoneInput?.value || '',
+        };
+        
+        onSuccess(targetLink, formData);
       }
     };
 

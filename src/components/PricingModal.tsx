@@ -22,16 +22,28 @@ const PricingModal: React.FC<PricingModalProps> = ({
 }) => {
   // O foco é garantir que o redirecionamento ocorra após o callback.
 
-  const handleFormSuccess = (link: string) => {
-    console.log('Redirecionando para:', link);
+  const handleFormSuccess = (link: string, formData: { name: string; email: string; phone: string }) => {
+    console.log('Redirecionando para:', link, 'com dados:', formData);
     
     // 1. Fecha o modal imediatamente
     onOpenChange(false); 
 
-    // 2. Redireciona a aba atual para o link de compra após um pequeno delay.
+    // 2. Constrói a URL com os parâmetros do formulário
+    const url = new URL(link);
+    if (formData.name) {
+      url.searchParams.set('name', formData.name);
+    }
+    if (formData.email) {
+      url.searchParams.set('email', formData.email);
+    }
+    if (formData.phone) {
+      url.searchParams.set('phone', formData.phone);
+    }
+
+    // 3. Redireciona a aba atual para o link de compra após um pequeno delay.
     // O delay de 100ms ajuda a garantir que o estado do modal seja atualizado antes da navegação.
     setTimeout(() => {
-      window.location.href = link;
+      window.location.href = url.toString();
     }, 100);
   };
 
