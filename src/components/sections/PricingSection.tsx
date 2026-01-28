@@ -24,29 +24,11 @@ const PricingSection = () => {
 
   const plans = [
     {
-      highlight: "VITALÍCIO",
-      title: "MENTORIA + INTENSIVÃO",
-      subtitle: "Acesso até passar",
-      originalPrice: "R$ 12.397",
-      installmentPrice: "12x de R$ 944",
-      cashPrice: "R$ 9.297",
-      features: [
-        "Mentoria completa",
-        "Simulados autorais",
-        "Materiais didáticos",
-        "Heatmaps: mapas de incidência SES-PE",
-        "Intensivão final SES-PE e ENAMED",
-        "Acesso até aprovação",
-      ],
-      featured: true,
-      link: "https://pay.hub.la/2L2INoOmRCWYOZFDPMli",
-    },
-    {
       highlight: "1 ANO",
       title: "MENTORIA + INTENSIVÃO",
       subtitle: null,
       originalPrice: "R$ 4.947",
-      installmentPrice: "12x de R$ 343",
+      installmentPrice: "12x de R$ 394,64",
       cashPrice: "R$ 3.384",
       features: [
         "Mentoria completa",
@@ -56,14 +38,14 @@ const PricingSection = () => {
         "Intensivão final SES-PE e ENAMED",
       ],
       featured: false,
-      link: "https://pay.hub.la/OSukjs6DGCU6sWGrnPBR",
+      link: "https://pay.hub.la/PiSKxMDXWRGthaP8s4Wp",
     },
     {
       highlight: null,
       title: "MENTORIA",
       subtitle: "1 ANO",
       originalPrice: "R$ 3.847",
-      installmentPrice: "12x de R$ 304",
+      installmentPrice: "12x de R$ 372,28",
       cashPrice: "R$ 2.994",
       features: [
         "Mentoria completa",
@@ -72,14 +54,14 @@ const PricingSection = () => {
         "Heatmaps: mapas de incidência SES-PE",
       ],
       featured: false,
-      link: "https://pay.hub.la/Plaz7FCRpEWbdxYR70iT",
+      link: "https://pay.hub.la/CqZF7dHdfWFmCbo5ctil",
     },
     {
       highlight: "RECOMENDADO",
       title: "MENTORIA + INTENSIVÃO",
       subtitle: "2 ANOS - Opção para quem quer se preparar desde o 5° ano",
       originalPrice: "R$ 7.694",
-      installmentPrice: "12x de R$ 599",
+      installmentPrice: "12x de R$ 650,28",
       cashPrice: "R$ 5.900",
       features: [
         "Planejamento longo prazo",
@@ -90,7 +72,7 @@ const PricingSection = () => {
         "Intensivão final SES-PE e ENAMED",
       ],
       featured: true,
-      link: "https://pay.hub.la/pWgJ4dAT0tM9IjXshdbl",
+      link: "https://pay.hub.la/2oF1e0znhEVShwGOxK0R",
     },
   ];
 
@@ -106,7 +88,7 @@ const PricingSection = () => {
           </div>
 
           {/* Pricing Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-4 sm:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 px-4 sm:px-0">
             {plans.map((plan, index) => (
               <div
                 key={index}
