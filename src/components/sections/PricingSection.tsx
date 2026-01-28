@@ -29,6 +29,7 @@ const PricingSection = () => {
       subtitle: null,
       originalPrice: "R$ 5.947",
       installmentPrice: "12x de R$ 394,64",
+      cashPrice: "R$ 3.884",
       features: [
         "Mentoria completa",
         "Simulados autorais",
@@ -45,6 +46,7 @@ const PricingSection = () => {
       subtitle: "1 ANO",
       originalPrice: "R$ 4.847",
       installmentPrice: "12x de R$ 372,28",
+      cashPrice: "R$ 3.664",
       features: [
         "Mentoria completa",
         "Simulados autorais",
@@ -60,6 +62,7 @@ const PricingSection = () => {
       subtitle: "2 ANOS - Opção para quem quer se preparar desde o 5° ano",
       originalPrice: "R$ 8.694",
       installmentPrice: "12x de R$ 650,28",
+      cashPrice: "R$ 6.400",
       features: [
         "Planejamento longo prazo",
         "Mentoria completa",
@@ -137,6 +140,19 @@ const PricingSection = () => {
                       <p className="text-xl sm:text-2xl font-bold text-foreground leading-tight">
                         {plan.installmentPrice}
                       </p>
+                    </div>
+                    
+                    {/* Cash Price */}
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="text-xs sm:text-sm text-muted-foreground font-medium">
+                        ou
+                      </span>
+                      <span className="text-base sm:text-lg font-bold text-accent">
+                        {plan.cashPrice}
+                      </span>
+                      <span className="text-xs sm:text-sm text-muted-foreground font-medium">
+                        à vista
+                      </span>
                     </div>
                   </div>
 
