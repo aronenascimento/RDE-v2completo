@@ -27,7 +27,7 @@ const PricingSection = () => {
       highlight: "1 ANO",
       title: "MENTORIA + INTENSIVÃO",
       subtitle: null,
-      originalPrice: "R$ 4.947",
+      originalPrice: "R$ 5.947",
       installmentPrice: "12x de R$ 394,64",
       features: [
         "Mentoria completa",
@@ -43,7 +43,7 @@ const PricingSection = () => {
       highlight: null,
       title: "MENTORIA",
       subtitle: "1 ANO",
-      originalPrice: "R$ 3.847",
+      originalPrice: "R$ 4.847",
       installmentPrice: "12x de R$ 372,28",
       features: [
         "Mentoria completa",
@@ -58,7 +58,7 @@ const PricingSection = () => {
       highlight: "RECOMENDADO",
       title: "MENTORIA + INTENSIVÃO",
       subtitle: "2 ANOS - Opção para quem quer se preparar desde o 5° ano",
-      originalPrice: "R$ 7.694",
+      originalPrice: "R$ 8.694",
       installmentPrice: "12x de R$ 650,28",
       features: [
         "Planejamento longo prazo",
