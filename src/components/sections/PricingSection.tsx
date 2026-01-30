@@ -78,8 +78,8 @@ const PricingSection = () => {
       highlight: "4° ANO",
       title: "MENTORIA + INTENSIVÃO ENAMED",
       subtitle: null,
-      originalPrice: null,
-      installmentPrice: null,
+      originalPrice: "R$ 4.786",
+      installmentPrice: "12x de R$ 372,28",
       cashPrice: "R$ 3.664",
       features: [
         "Mentoria completa",
