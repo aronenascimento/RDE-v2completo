@@ -88,7 +88,7 @@ const PricingSection = () => {
         "Intensivão ENAMED",
       ],
       featured: false,
-      link: "", // Link será adicionado posteriormente
+      link: "https://pay.hub.la/Y08xujLHXsN2NcboFCMi",
     },
   ];
 
