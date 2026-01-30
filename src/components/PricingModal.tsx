@@ -31,15 +31,20 @@ const PricingModal: React.FC<PricingModalProps> = ({
     // 1. Em vez de fechar, ativamos o estado de loading
     setIsRedirecting(true);
 
-    // 2. Constrói a URL
-    const url = new URL(link);
-    if (formData.name) url.searchParams.set('name', formData.name);
-    if (formData.email) url.searchParams.set('email', formData.email);
-    if (formData.phone) url.searchParams.set('phone', formData.phone);
+    try {
+      // 2. Constrói a URL
+      const url = new URL(link);
+      if (formData.name) url.searchParams.set('name', formData.name);
+      if (formData.email) url.searchParams.set('email', formData.email);
+      if (formData.phone) url.searchParams.set('phone', formData.phone);
 
-    // 3. Redireciona. Não precisamos de setTimeout para "esperar o modal fechar" mais.
-    // O usuário verá a mensagem de "Redirecionando..." até a nova página carregar.
-    window.location.href = url.toString();
+      // 3. Redireciona
+      window.location.href = url.toString();
+    } catch (error) {
+      console.error('Erro ao construir URL:', error);
+      // Se a URL for inválida, tenta redirecionar diretamente
+      window.location.href = link;
+    }
   };
 
   const handleClose = (isOpen: boolean) => {
