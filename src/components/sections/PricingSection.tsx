@@ -74,6 +74,22 @@ const PricingSection = () => {
       featured: true,
       link: "https://pay.hub.la/2oF1e0znhEVShwGOxK0R",
     },
+    {
+      highlight: "4° ANO",
+      title: "MENTORIA + INTENSIVÃO ENAMED",
+      subtitle: null,
+      originalPrice: null,
+      installmentPrice: null,
+      cashPrice: "R$ 3.664",
+      features: [
+        "Mentoria completa",
+        "Simulados autorais",
+        "Materiais didáticos e aulas",
+        "Intensivão ENAMED",
+      ],
+      featured: false,
+      link: "", // Link será adicionado posteriormente
+    },
   ];
 
   return (
@@ -136,11 +152,13 @@ const PricingSection = () => {
                     )}
                     
                     {/* Installment Price */}
-                    <div>
-                      <p className="text-xl sm:text-2xl font-bold text-foreground leading-tight">
-                        {plan.installmentPrice}
-                      </p>
-                    </div>
+                    {plan.installmentPrice && (
+                      <div>
+                        <p className="text-xl sm:text-2xl font-bold text-foreground leading-tight">
+                          {plan.installmentPrice}
+                        </p>
+                      </div>
+                    )}
                     
                     {/* Cash Price */}
                     <div className="flex items-center gap-2 flex-wrap">
